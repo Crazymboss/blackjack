@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Casino/BlackJack Game</title>
+    <link rel="icon" href="logos/casino.png">
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <h1 id="game" >BlackJack Game</h1>
+        <div class="table">
+            <span><img src="logos/dealer.png"></span>
+            <p id="message-el"> - Want to play a round?</p>
+            <button id="startgame" onclick="startGame()">Start Game</button>
+            <button id="newcard" onclick="newCard()">New Card</button>
+            <button id="stop" onclick="stopGame()">No Card</button>
+            <p id="cards">Cards: </p>
+            <p id="sum">You have: </p>
+            <img id="blackjacktable" src="logos/baccarat.png">
+            <p id="player-el"></p>
+            <p id="dealer">Dealer has: </p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

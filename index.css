@@ -1,0 +1,89 @@
+body {
+    background-image: url("imagini/casinotable.jpg");
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+#game {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4vw;
+    color: goldenrod;
+}
+p {
+    position: relative;
+    text-align: center;
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 2vw;
+
+}
+img {
+    position: absolute;
+    margin-top: -1.5vw;
+    margin-left: 29vw;
+    width: 4vw;
+}
+#blackjacktable {
+    width: 30vw;
+    height: 20vw;
+    position: absolute;
+    margin-left: 35vw;
+}
+#startgame {
+    margin-top: 16vw;
+    margin-left: 72vw;
+    position: absolute;
+    width: 5vw;
+    height: 1.5vw;
+    font-size: 0.7vw;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: goldenrod;
+    border: none;
+
+}
+#startgame:hover {
+    background-color: green;
+    transform: scale(0.9);
+}
+#newcard {
+    margin-top: 18vw;
+    margin-left: 72vw;
+    position: absolute;
+    width: 5vw;
+    height: 1.5vw;
+    font-size: 0.7vw;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: goldenrod;
+    border: none;
+
+}
+#newcard:hover {
+    background-color: green;
+    transform: scale(0.9);
+}
+#stop {
+    margin-top: 20vw;
+    margin-left: 72vw;
+    position: absolute;
+    width: 5vw;
+    height: 1.5vw;
+    font-size: 0.7vw;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: goldenrod;
+    border: none;
+}
+#stop:hover {
+    background-color: green;
+    transform: scale(0.9);
+}
+#player-el {
+    margin-top: 20vw;
+}
+#dealer {
+    position: absolute;
+    margin-left: 24vw;
+    margin-top: -26.6vw;
+}
