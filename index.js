@@ -83,38 +83,44 @@ function newCard() {
     
 }
 function stopGame(){
-    isAlive = false
-    let randomNumber = Math.floor(Math.random() * 5) + 16
-    dealerCards = document.getElementById('dealer')
-    dealerCards.textContent = "Dealer has: " + randomNumber
-    if(sum < randomNumber) {
-      message = '- You lost, -$10 from your account!!😭'
-      messageEl.textContent = message
-      player.chips = player.chips - 10
-      let playerEl = document.getElementById('player-el')
-      playerEl.textContent = player.name + ": $" + player.chips
+    if (isAlive === true) {
+        let randomNumber = Math.floor(Math.random() * 5) + 16
+        dealerCards = document.getElementById('dealer')
+        dealerCards.textContent = "Dealer has: " + randomNumber
+        if(sum < randomNumber) {
+          message = '- You lost, -$10 from your account!!😭'
+          messageEl.textContent = message
+          player.chips = player.chips - 10
+          let playerEl = document.getElementById('player-el')
+          playerEl.textContent = player.name + ": $" + player.chips
+          isAlive = false
+        }
+        else if (sum > randomNumber && sum < 21) {
+          message = '- You won $10!! Congrats!!!🥳'
+          messageEl.textContent = message
+          player.chips = player.chips + 10
+          let playerEl = document.getElementById('player-el')
+          playerEl.textContent = player.name + ": $" + player.chips
+          isAlive = false
+        }
+        else if (sum === 21) {
+            message = "- WOW it's a Blackjack You won: $20🤩"
+            messageEl.textContent = message
+            player.chips = player.chips + 20
+            let playerEl = document.getElementById('player-el')
+            playerEl.textContent = player.name + ": $" + player.chips
+            isAlive = false
+        }
+        else if (sum == randomNumber) {
+          message = "- It's a draw You won: $5🙁"
+          messageEl.textContent = message
+          player.chips = player.chips + 5
+          let playerEl = document.getElementById('player-el')
+          playerEl.textContent = player.name + ": $" + player.chips
+          isAlive = false
+        }
     }
-    else if (sum > randomNumber && sum < 21) {
-      message = '- You won $10!! Congrats!!!🥳'
-      messageEl.textContent = message
-      player.chips = player.chips + 10
-      let playerEl = document.getElementById('player-el')
-      playerEl.textContent = player.name + ": $" + player.chips
-    }
-    else if (sum === 21) {
-        message = "- WOW it's a Blackjack You won: $20🤩"
-        messageEl.textContent = message
-        player.chips = player.chips + 20
-        let playerEl = document.getElementById('player-el')
-        playerEl.textContent = player.name + ": $" + player.chips
-    }
-    else if (sum == randomNumber) {
-      message = "- It's a draw You won: $5🙁"
-      messageEl.textContent = message
-      player.chips = player.chips + 5
-      let playerEl = document.getElementById('player-el')
-      playerEl.textContent = player.name + ": $" + player.chips
-    }
+
 }
 
 
